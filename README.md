@@ -1,4 +1,4 @@
-#Automatic Install
+**Automatic Install**
 
 This script help to install some tools and modules php for laravel and install mysql-server and more thing.
 
