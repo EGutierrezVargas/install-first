@@ -7,14 +7,17 @@ sudo apt-get install mysql-server -y
 echo "Instalando Modulos de PHP"
 sudo add-apt-repository ppa:ondrej/php
 
-sudo apt install php-common php7.2-curl php-json php-readline php7.2-fpm php7.2-cli php7.2-xml php-mcrypt php-zip php-mbstring php-gd -y
+sudo apt install php-common php7.2-curl php-json php-readline php7.2-fpm php7.2-cli php7.2-xml php7.1-mcrypt php7.1-mbstring php-zip php-mbstring php-gd -y
 sudo apt install php7.2 libapache2-mod-php7.2 php7.2-pdo php7.2-mysql php7.2-mbstring php7.2-xmlrpc php7.2-soap php7.2-gd php7.2-xml php7.2-cli php7.2-zip -y
 
-sudo phpenmod mcrypt
+sudo apt-get -y install gcc make autoconf libc-dev pkg-config
+sudo apt-get -y install php7.2-dev
+sudo apt-get -y install libmcrypt-dev
+sudo pecl install mcrypt-1.0.1
 
-echo "Instalando Apache2"
+echo "Instalando Nginx"
 
-sudo apt-get install apache2 -y
+sudo apt-get install nginx -y
 
 echo "Se instala Curl"
 sudo apt-get install curl
